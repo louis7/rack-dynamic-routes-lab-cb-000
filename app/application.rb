@@ -11,7 +11,7 @@ class Application
       item_title = req.path.split("/items/").last #turn /songs/Sorry into Sorry
       item = @@items.find{|element| element.title == item_title}
 
-      resp.write item
+      resp.write item.price
 
     else
       resp.write "Route not found"
