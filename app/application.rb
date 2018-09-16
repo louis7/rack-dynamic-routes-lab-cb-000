@@ -9,7 +9,7 @@ class Application
     if req.path.match(/items/)
 
       item_title = req.path.split("/items/").last #turn /songs/Sorry into Sorry
-      item = @@items.find{|element| element.title == item_title}
+      item = @@items.find{|element| element.name == item_title}
 
       resp.write item.price
 
