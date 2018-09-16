@@ -12,7 +12,7 @@ class Application
       item = @@items.find{|element| element.title == item_title}
 
       resp.write item
-    
+
     else
       resp.write "404"
     end
