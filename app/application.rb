@@ -14,8 +14,9 @@ class Application
       resp.write item.price
 
   elsif @item_title != item || item ==nil
-    
-
+    resp.write "Dont have this item in our cart"
+    resp.status = 400
+      
     else
       resp.write "Route not found"
       resp.status = 404
