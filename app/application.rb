@@ -13,14 +13,15 @@ class Application
 
       resp.write item.price
 
+  else
+    resp.write "Dont have this item in our cart"
+    resp.status = 400
+  end
+  
     else
-          resp.status = 400
-          resp.write "Item not found"
-        end
-      else
-        resp.status=404
-        resp.write "Route not found"
-      end
+      resp.write "Route not found"
+      resp.status = 404
+    end
 
     resp.finish
   end
